@@ -17,9 +17,8 @@
         <button type="submit">Send</button>
       </form>
       <div class="social-links">
-        <a href="https://linkedin.com" target="_blank">LinkedIn</a>
-        <a href="https://github.com" target="_blank">GitHub</a>
-        <a href="https://twitter.com" target="_blank">Twitter</a>
+        <a href="https://www.linkedin.com/in/evie-hammett-67887b215/" target="_blank">LinkedIn</a>
+        <a href="https://github.com/eviehammett" target="_blank">GitHub</a>
       </div>
     </section>
   </template>

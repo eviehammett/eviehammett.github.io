@@ -1,7 +1,7 @@
 <template>
     <section id="home" class="home-section">
       <div class="intro">
-        <h1>Hello, I'm [Your Name]</h1>
+        <h1>Hello, I'm Evie Hammett</h1>
         <p>Junior Frontend Developer specializing in Vue.js</p>
         <a href="#projects" class="cta">View My Work</a>
       </div>
@@ -15,7 +15,7 @@
     align-items: center;
     height: 100vh;
     
-    color: #ffffff;
+    color: #000000;
     text-align: center;
   }
   

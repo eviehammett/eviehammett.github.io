@@ -1,10 +1,10 @@
 <template>
     <section id="about" class="about-section">
-      <img src="#" alt="Profile Picture" class="profile-pic"/>
+      <img src="../assets/profile.jpg" alt="Profile Picture" class="profile-pic"/>
       <div class="about-content">
         <h2>About Me</h2>
         <p>[Your detailed introduction]</p>
-        <a href="#" download class="download-resume">Download Resume</a>
+        <a href="../assets/EvieCV.pdf" target="_blank" class="download-resume">Download Resume</a>
       </div>
     </section>
   </template>
