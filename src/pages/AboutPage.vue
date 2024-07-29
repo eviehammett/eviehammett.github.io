@@ -1,14 +1,24 @@
 <template>
     <section id="about" class="about-section">
-      <img src="../assets/profile.jpg" alt="Profile Picture" class="profile-pic"/>
+      <img :src="profilePic" alt="Profile Picture" class="profile-pic"/>
       <div class="about-content">
         <h2>About Me</h2>
         <p>[Your detailed introduction]</p>
-        <a href="../assets/EvieCV.pdf" target="_blank" class="download-resume">Download Resume</a>
+        <a :href="cvLink" target="_blank" class="view-resume">View My Resume</a>
       </div>
     </section>
   </template>
   
+  <script>
+  export default {
+    data() {
+      return {
+        profilePic: require('../assets/profile.jpg'),
+        cvLink: 'https://drive.google.com/file/d/1GD99SyJWTl-mKvxMnWnab189iQSuXjEQ/view?usp=drive_link'
+      }
+    },
+  }
+  </script>
   <style scoped>
   .about-section {
     display: flex;
@@ -29,7 +39,7 @@
     text-align: center;
   }
   
-  .download-resume {
+  .view-resume {
     display: inline-block;
     margin-top: 1rem;
     padding: 0.5rem 1.5rem;
@@ -41,7 +51,7 @@
     transition: background-color 0.3s;
   }
   
-  .download-resume:hover {
+  .view-resume:hover {
     background-color: #35495e;
   }
   </style>
