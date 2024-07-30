@@ -13,7 +13,7 @@
   export default {
     data() {
       return {
-        profilePic: require('../assets/profile.jpg'),
+        profilePic: 'https://github.com/eviehammett/eviehammett.github.io/blob/main/src/assets/profile.jpg',
         cvLink: 'https://drive.google.com/file/d/1GD99SyJWTl-mKvxMnWnab189iQSuXjEQ/view?usp=drive_link'
       }
     },
