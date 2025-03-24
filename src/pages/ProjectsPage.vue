@@ -22,11 +22,11 @@
         projects: [
           {
             id: 1,
-            name: 'Project One',
-            description: 'Description for project one.',
-            image: '#',
-            liveDemo: 'https://live-demo-link.com',
-            github: 'https://github-link.com'
+            name: 'Pomodoro Timer',
+            description: 'A pomodoro timer app with custom theme settings.',
+            image: '../../public/pomodoro.png',
+            liveDemo: 'https://eviepomodorotimer.netlify.app',
+            github: 'https://github.com/eviehammett/pomodoro'
           },
           // Add more projects as needed
         ]
