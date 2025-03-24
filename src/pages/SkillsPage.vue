@@ -3,7 +3,7 @@
       <h2>Skills</h2>
       <div class="skills-list">
         <div class="skill">
-          <img src="#" alt="Vue.js"/>
+          <img src="https://github.com/eviehammett/eviehammett.github.io/blob/dev/src/assets/logo.png?raw=true" alt="Vue.js"/>
           <p>Vue.js</p>
         </div>
         <!-- Add more skills as needed -->

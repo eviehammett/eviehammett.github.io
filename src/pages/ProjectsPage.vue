@@ -3,7 +3,7 @@
       <h2>Projects</h2>
       <div class="projects-grid">
         <div class="project-card" v-for="project in projects" :key="project.id">
-          <img :src="project.image" :alt="project.name"/>
+          <img :src="project.image" :alt="project.name" style="height: 120px; width: 120px;"/>
           <div class="project-info">
             <h3>{{ project.name }}</h3>
             <p>{{ project.description }}</p>
@@ -24,11 +24,18 @@
             id: 1,
             name: 'Pomodoro Timer',
             description: 'A pomodoro timer app with custom theme settings.',
-            image: '../../public/pomodoro.png',
+            image: 'https://github.com/eviehammett/eviehammett.github.io/blob/dev/public/pomodoro.png?raw=true',
             liveDemo: 'https://eviepomodorotimer.netlify.app',
             github: 'https://github.com/eviehammett/pomodoro'
           },
-          // Add more projects as needed
+          {
+            id: 2,
+            name: 'Project 2',
+            description: 'Description of Project 2',
+            image: '#',
+            liveDemo: 'link',
+            github: 'link'
+          },
         ]
       }
     }
