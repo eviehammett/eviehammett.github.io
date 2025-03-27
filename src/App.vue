@@ -1,7 +1,6 @@
 <template>
   <div id="app">
     <HeaderVue />
-    <HomePage />
     <AboutPage />
     <SkillsPage />
     <ProjectsPage />
@@ -12,7 +11,6 @@
 
 <script>
 import HeaderVue from './components/HeaderVue.vue';
-import HomePage from './pages/HomePage.vue';
 import AboutPage from './pages/AboutPage.vue';
 import SkillsPage from './pages/SkillsPage.vue';
 import ProjectsPage from './pages/ProjectsPage.vue';
@@ -23,7 +21,6 @@ export default {
   name: 'App',
   components: {
     HeaderVue,
-    HomePage,
     AboutPage,
     SkillsPage,
     ProjectsPage,
