@@ -15,11 +15,15 @@
           <label for="message">Message</label>
           <textarea id="message" v-model="form.message" required></textarea>
         </div>
-        <button type="submit">Send Message</button>
+        <button type="submit" class="send-btn">Send Message</button>
       </form>
       <div class="social-links">
-        <a href="https://www.linkedin.com/in/evie-hammett-67887b215/" target="_blank">LinkedIn</a>
-        <a href="https://github.com/eviehammett" target="_blank">GitHub</a>
+        <a href="https://www.linkedin.com/in/evie-hammett-67887b215/" target="_blank" class="social-icon linkedin">
+          <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" />
+        </a>
+        <a href="https://github.com/eviehammett" target="_blank" class="social-icon github">
+          <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" />
+        </a>
       </div>
     </div>
   </section>
@@ -34,31 +38,42 @@ export default {
         email: '',
         message: ''
       }
-    }
+    };
   },
   methods: {
     submitForm() {
-      alert('Form submitted');
+      // Construct the mailto link with form details
+      const subject = 'Contact Form Submission';
+      const body = `Name: ${this.form.name}\nEmail: ${this.form.email}\n\nMessage:\n${this.form.message}`;
+      const mailtoLink = `mailto:eviehammett@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+      // Open the user's email client with the prefilled information
+      window.location.href = mailtoLink;
+
+      // Reset form details
+      this.form.name = '';
+      this.form.email = '';
+      this.form.message = '';
     }
   }
-}
+};
 </script>
 
 <style scoped>
 .contact-section {
   padding: 4rem 1rem;
-  background: linear-gradient(135deg, #42b883, #35495e);
-  color: white;
+  background: linear-gradient(135deg, #ecf0f3, #dee2e6);
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .contact-container {
-  background: white;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(12px);
   color: #333;
-  padding: 2rem;
-  border-radius: 12px;
+  padding: 2.5rem;
+  border-radius: 15px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   width: 90%;
   max-width: 500px;
@@ -66,21 +81,19 @@ export default {
 }
 
 h2 {
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   color: #35495e;
-  font-size: 1.8rem;
+  font-size: 2rem;
 }
 
 .contact-form {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  margin: auto;
 }
 
 .form-group {
   text-align: left;
-  margin-right: 25px;
 }
 
 label {
@@ -93,16 +106,17 @@ label {
 input, textarea {
   width: 100%;
   padding: 0.75rem;
-  border: 1px solid #ddd;
-  border-radius: 6px;
+  border: none;
+  border-radius: 8px;
   font-size: 1rem;
-  transition: border-color 0.3s;
-  margin: auto;
+  transition: all 0.3s;
+  background: rgba(255, 255, 255, 0.6);
+  box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.05);
 }
 
 input:focus, textarea:focus {
-  border-color: #42b883;
   outline: none;
+  border: 2px solid #42b883;
 }
 
 textarea {
@@ -110,36 +124,37 @@ textarea {
   resize: vertical;
 }
 
-button {
+.send-btn {
   background: #42b883;
   color: white;
   padding: 0.75rem;
   border: none;
-  border-radius: 6px;
+  border-radius: 8px;
   cursor: pointer;
   font-size: 1rem;
   font-weight: bold;
-  transition: background 0.3s;
+  transition: background 0.3s ease-in-out, transform 0.2s;
 }
 
-button:hover {
+.send-btn:hover {
   background: #35495e;
+  transform: scale(1.05);
 }
 
 .social-links {
-  margin-top: 1.5rem;
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
 }
 
-.social-links a {
-  color: #42b883;
-  font-weight: bold;
-  text-decoration: none;
-  margin: 0 0.75rem;
-  transition: color 0.3s;
+.social-icon img {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.3s ease-in-out;
 }
 
-.social-links a:hover {
-  color: #35495e;
-  text-decoration: underline;
+.social-icon:hover img {
+  transform: scale(1.1);
 }
 </style>

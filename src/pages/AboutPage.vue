@@ -28,7 +28,7 @@ export default {
   data() {
     return {
       profilePic: 'https://raw.githubusercontent.com/eviehammett/eviehammett.github.io/dev/src/assets/profile.jpg',
-      cvLink: 'https://drive.google.com/file/d/1GD99SyJWTl-mKvxMnWnab189iQSuXjEQ/view?usp=drive_link'
+      cvLink: 'https://drive.google.com/file/d/1CGt3eDsPWmOD-FYpbrPM1_OZOk7uvLbV/view?usp=drive_link'
     }
   },
 }
